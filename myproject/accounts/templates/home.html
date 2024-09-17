@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .box {
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin: 0;
+            color: #666;
+        }
+        a {
+            text-decoration: none;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #007bff;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        
+        <div class="box">
+            <h2>Sign Up</h2>
+            <a href="{% url 'signup' %}" class="button">Create a new account</a>
+        </div>
+        
+        <div class="box">
+            <h2>Sign In</h2>
+            <a href="{% url 'login' %}" class="button">Log in to your account</a>
+        </div>
+        
+        <div class="box">
+            <h2>Sign In as Admin</h2>
+            <a href="{% url 'admin_login' %}" class="button">Log in to the admin panel</a>
+        </div>
+    </div>
+</body>
+</html>
